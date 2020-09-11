@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Breaking down how React works into vanilla js",
   "keywords": [],
-  "main": "src/index.js",
+  "main": "src2/index.js",
   "dependencies": {
     "react": "16.8.6",
     "react-dom": "16.8.6",
