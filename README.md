@@ -44,3 +44,22 @@ Type is a string that specifies the type of DOM node being created (the tagName 
 Props is an object that has all the keys and values from the JSX attributes with a children property.
 
 Children is a string in this example but is typically an array with more elements (this is why elements are also trees).
+
+```
+ReactDOM.render(element, container)
+```
+
+The next piece of code that needs to be replaced is the ReactDOM.render call (render is how React changes the DOM).
+
+A node (DOM element) needs to be created using the element (React element) type then the element props need ot be assigned to the node.
+
+```
+const node = document.createElement(element.type)
+node["title"] = element.props.title
+const text = document.createTextNode("")
+text["nodeValue"] = element.props.children
+```
+
+Using textNode allows all elements to be treated in the same way in the future. "nodeValue" is the key for "Hello World".
+
+The last step is to append the textNode to the h1 and the h1 to the container.
